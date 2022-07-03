@@ -11,7 +11,7 @@ Citizen.CreateThread(function()
 		elseif (current_zone ~= nil) then
 			local player = PlayerPedId()
 			local player_coords = GetEntityCoords(player)
-			local player_distance = GetDistanceBetweenCoords(player_coords.x, player_coords.y, player_coords.z, current_zone.x, current_zone.y, current_zone.z, false)
+			local player_distance = GetDistanceBetweenCoords(player_coords.x, player_coords.y, player_coords.z, current_zone.coords.x, current_zone.coords.y, current_zone.coords.z, false)
 			
 			if (player_distance < current_zone.radius) then
 				in_zone = true
